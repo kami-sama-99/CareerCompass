@@ -1,0 +1,3 @@
+firebase:
+  service-account-key-path: file:///D:\Gen AI hackathon\config\src\main\resources\configs\serviceAccountKey.json
+  storage-bucket: career-compass-e2f8b.appspot.com
