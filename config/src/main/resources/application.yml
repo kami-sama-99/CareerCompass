@@ -9,5 +9,6 @@ spring:
         native:
           search-locations: file:///D:\Gen AI hackathon\config\src\main\resources\configs
 
+
 server:
   port: 8888
