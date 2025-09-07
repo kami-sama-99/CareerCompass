@@ -37,6 +37,7 @@ public class UserService {
 
     private User mapUserRequestToUser(UserRequest userRequest) {
         User user = new User();
+        user.setUserId(userRequest.getUserId());
         user.setFirstName(userRequest.getFirstName());
         user.setLastName(userRequest.getLastName());
         user.setEmail(userRequest.getEmail());

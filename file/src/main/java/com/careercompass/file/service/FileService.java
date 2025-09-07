@@ -10,7 +10,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.util.Date;
-import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 @Service
@@ -23,9 +22,7 @@ public class FileService {
     }
 
     public FileMetadata uploadFile(MultipartFile file, String userId) throws IOException {
-        String fileName = file.getOriginalFilename();
-        //gs://
-        //career-compass-e2f8b.firebasestorage.app
+        String fileName = file.getOriginalFilename() + "_Resume";
 
         // Upload to Firebase Storage
         Blob blob = StorageClient.getInstance()
