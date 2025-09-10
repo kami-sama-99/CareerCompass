@@ -1,0 +1,3 @@
+firebase:
+  service-account-key-path: D:/keys/serviceAccountKey.json
+  storage-bucket: career-compass-e2f8b.appspot.com

@@ -9,16 +9,26 @@
         <outputRelativeToContentRoot value="true" />
         <module name="config" />
       </profile>
-      <profile name="Annotation profile for user" enabled="true">
+      <profile name="Annotation profile for mentor" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
         </processorPath>
+        <module name="file" />
         <module name="user" />
         <module name="auth" />
-        <module name="file" />
+      </profile>
+      <profile name="Annotation profile for message" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
+        </processorPath>
+        <module name="message" />
       </profile>
     </annotationProcessing>
   </component>
@@ -27,6 +37,7 @@
       <module name="auth" options="-parameters" />
       <module name="config" options="-parameters" />
       <module name="file" options="-parameters" />
+      <module name="message" options="-parameters" />
       <module name="user" options="-parameters" />
     </option>
   </component>

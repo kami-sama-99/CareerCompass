@@ -9,6 +9,8 @@
         <option value="$PROJECT_DIR$/config/pom.xml" />
         <option value="$PROJECT_DIR$/configserver/pom.xml" />
         <option value="$PROJECT_DIR$/file/pom.xml" />
+        <option value="$PROJECT_DIR$/mentor/pom.xml" />
+        <option value="$PROJECT_DIR$/message/pom.xml" />
       </list>
     </option>
   </component>

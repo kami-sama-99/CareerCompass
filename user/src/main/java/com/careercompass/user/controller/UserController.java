@@ -29,7 +29,7 @@ public class UserController {
 
     @GetMapping("/profile/{id}")
     public ResponseEntity<UserResponse> getUserProfile(
-            @RequestParam String id
+            @PathVariable String id
     ) throws ExecutionException, InterruptedException {
         UserResponse userResponse = userService.getProfile(id);
         return ResponseEntity.ok(userResponse);
