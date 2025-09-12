@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.concurrent.ExecutionException;
 
 @RestController
-@RequestMapping("/users/{userId}/mentor_sessions")
+@RequestMapping("/api/users/{userId}/mentor_sessions")
 @RequiredArgsConstructor
 public class MessageController {
 

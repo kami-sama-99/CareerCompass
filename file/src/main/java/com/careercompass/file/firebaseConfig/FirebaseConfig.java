@@ -17,23 +17,19 @@ public class FirebaseConfig {
     @Value("${firebase.service-account-key-path}")
     private String serviceAccountPath;
 
-    @Value("${firebase.storage-bucket}") // add bucket property
-    private String storageBucket;
-
     @PostConstruct
     public void init() throws IOException {
         InputStream serviceAccount;
 
-        if (serviceAccountPath.startsWith("classpath:")) {
+        if(serviceAccountPath.startsWith("classpath:")) {
             String path = serviceAccountPath.replace("classpath:", "");
             serviceAccount = this.getClass().getClassLoader().getResourceAsStream(path);
         } else {
             serviceAccount = new FileInputStream(serviceAccountPath);
         }
 
-        FirebaseOptions options = FirebaseOptions.builder()
+        FirebaseOptions options = new FirebaseOptions.Builder()
                 .setCredentials(GoogleCredentials.fromStream(serviceAccount))
-                .setStorageBucket(storageBucket) // set the storage bucket here
                 .build();
 
         if (FirebaseApp.getApps().isEmpty()) {
@@ -41,3 +37,4 @@ public class FirebaseConfig {
         }
     }
 }
+

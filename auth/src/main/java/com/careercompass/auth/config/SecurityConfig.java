@@ -1,3 +1,4 @@
+
 package com.careercompass.auth.config;
 
 import com.careercompass.auth.filter.JwtAuthFilter;

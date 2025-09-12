@@ -14,9 +14,12 @@ import java.util.concurrent.ExecutionException;
 @Repository
 public class FileRepository {
 
-    private final Firestore db = FirestoreClient.getFirestore();
+    private Firestore getFirestore() {
+        return FirestoreClient.getFirestore();
+    }
 
     public void save(FileEntity file) {
+        Firestore db = getFirestore();
         Map<String, Object> docData = new HashMap<>();
         docData.put("fileId", file.getFileId());
         docData.put("fileName", file.getFileName());
@@ -29,6 +32,7 @@ public class FileRepository {
     }
 
     public FileEntity findById(String fileId) throws InterruptedException, ExecutionException {
+        Firestore db = getFirestore();
         DocumentSnapshot snapshot = db.collection("files").document(fileId).get().get();
         if (!snapshot.exists()) return null;
 

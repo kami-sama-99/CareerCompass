@@ -31,6 +31,10 @@
 		<spring-cloud.version>2025.0.0</spring-cloud.version>
 	</properties>
 	<dependencies>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
 		<!-- Firebase Admin SDK (to interact with Firestore & verify tokens if needed) -->
 		<dependency>
 			<groupId>com.google.firebase</groupId>
