@@ -14,16 +14,21 @@ spring:
               lower-case-service-id: true
           routes:
             - id: message-service
-              uri: http://localhost:8084
+              uri: lb://MESSAGE-SERVICE
               predicates:
                 - Path=/api/users/*/mentor_sessions/**
 
             - id: user-service
-              uri: http://localhost:8082
+              uri: lb://USER-SERVICE
               predicates:
                 - Path=/api/users/**
 
             - id: file-service
-              uri: http://localhost:8083
+              uri: lb://FILE-SERVICE
               predicates:
                 - Path=/api/file/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka/
