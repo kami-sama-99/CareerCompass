@@ -23,12 +23,4 @@ public class ResumeController {
     ) throws Exception {
         return ResponseEntity.ok(fileService.getFileMetadata(id));
     }
-
-    @PostMapping("upload")
-    public ResponseEntity<FileMetadata> uploadResume(
-            @RequestBody MultipartFile multipartFile,
-            @RequestBody String userId
-    ) throws IOException {
-        return ResponseEntity.ok(fileService.uploadFile(multipartFile, userId));
-    }
 }

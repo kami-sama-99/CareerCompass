@@ -20,7 +20,9 @@ public class UserController {
     public ResponseEntity<UserResponse> userOnboarding(
             @RequestBody UserRequest userRequest
             ) throws ExecutionException, InterruptedException {
+        System.out.println("Received request: " + userRequest);
         UserResponse userResponse = userService.userOnboarding(userRequest);
+        System.out.println("Response to be sent: " + userResponse);
         if (userResponse != null) {
             return new ResponseEntity<>(userResponse, HttpStatusCode.valueOf(201));
         }

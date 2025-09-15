@@ -1,6 +1,7 @@
 package com.careercompass.file.controller;
 
 import com.careercompass.file.model.FileMetadata;
+import com.careercompass.file.model.FileUploadResponse;
 import com.careercompass.file.service.FileService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -18,11 +19,10 @@ public class FileController {
 
     @PostMapping("/upload")
     public ResponseEntity<FileMetadata> uploadFile(
-            @RequestParam("file") MultipartFile file,
+            @RequestPart("file") MultipartFile file,
             @RequestParam("userId") String userId
             ) throws IOException {
-        FileMetadata metadata = fileService.uploadFile(file, userId);
-        return ResponseEntity.ok(metadata);
+        return ResponseEntity.ok(fileService.uploadFile(file, userId));
     }
 
     @GetMapping("/{fileName}")

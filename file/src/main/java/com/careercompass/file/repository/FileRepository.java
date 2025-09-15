@@ -20,15 +20,7 @@ public class FileRepository {
 
     public void save(FileEntity file) {
         Firestore db = getFirestore();
-        Map<String, Object> docData = new HashMap<>();
-        docData.put("fileId", file.getFileId());
-        docData.put("fileName", file.getFileName());
-        docData.put("downloadUrl", file.getDownloadUrl());
-        docData.put("size", file.getSize());
-        docData.put("contentType", file.getContentType());
-        docData.put("uploadedAt", file.getUploadedAt() != null ? file.getUploadedAt() : new Date());
-
-        db.collection("files").document(file.getFileId()).set(docData);
+        db.collection("files").document(file.getFileId()).set(file);
     }
 
     public FileEntity findById(String fileId) throws InterruptedException, ExecutionException {

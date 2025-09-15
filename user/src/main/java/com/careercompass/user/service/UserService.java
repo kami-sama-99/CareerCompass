@@ -15,10 +15,9 @@ public class UserService {
     private final UserRepository userRepository;
 
     public UserResponse userOnboarding(UserRequest userRequest) throws ExecutionException, InterruptedException {
-        if (validateUserRequest(userRequest)) {
-            return mapUserToUserResponse(userRepository.save(mapUserRequestToUser(userRequest)));
-        }
-        return null;
+        User user = mapUserRequestToUser(userRequest);
+        userRepository.save(user);
+        return mapUserToUserResponse(user);
     }
 
     private UserResponse mapUserToUserResponse(User user) {
