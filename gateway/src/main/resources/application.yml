@@ -23,10 +23,20 @@ spring:
               predicates:
                 - Path=/api/users/**
 
+            - id: user-service-student
+              uri: lb://USER-SERVICE
+              predicates:
+                - Path=/api/student/**
+
             - id: file-service
               uri: lb://FILE-SERVICE
               predicates:
                 - Path=/api/file/**
+
+            - id: exam-service
+              uri: lb://EXAM-SERVICE
+              predicates:
+                - Path=/api/exam/**
 
 eureka:
   client:

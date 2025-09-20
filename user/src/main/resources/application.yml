@@ -7,3 +7,6 @@ spring:
 server:
   port: ${PORT:8082}
 
+firebase:
+  service-account-key-path: ${FIREBASE_SERVICE_ACCOUNT_JSON}
+  storage-bucket: career-compass-e2f8b.appspot.com

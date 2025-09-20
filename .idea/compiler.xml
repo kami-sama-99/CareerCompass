@@ -11,17 +11,19 @@
         <module name="eureka-server" />
         <module name="gateway" />
       </profile>
-      <profile name="Annotation profile for auth" enabled="true">
+      <profile name="Annotation profile for exam-service" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
         </processorPath>
+        <module name="job-search" />
         <module name="file" />
         <module name="message" />
         <module name="auth" />
         <module name="user" />
+        <module name="exam-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -33,8 +35,10 @@
       <module name="auth" options="-parameters" />
       <module name="config" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
+      <module name="exam-service" options="-parameters" />
       <module name="file" options="-parameters" />
       <module name="gateway" options="-parameters" />
+      <module name="job-search" options="-parameters" />
       <module name="message" options="-parameters" />
       <module name="user" options="-parameters" />
     </option>

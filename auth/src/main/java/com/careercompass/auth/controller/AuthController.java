@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import com.careercompass.auth.util.JwtUtil;
 
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/api/auth")
 public class AuthController {
 
     private final JwtUtil jwtUtil;
