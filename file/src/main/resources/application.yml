@@ -1,8 +1,12 @@
 spring:
   application:
-    name: file-service
+    name: user-service
   config:
-    import: optional:configserver:http://localhost:8888
+    import: optional:configserver:https://config-server-53266248406.europe-west1.run.app
 
 server:
-  port: 8083
+  port: ${PORT:8083}
+
+firebase:
+  service-account-key-path: ${FIREBASE_SERVICE_ACCOUNT_JSON}
+  storage-bucket: career-compass-e2f8b.appspot.com

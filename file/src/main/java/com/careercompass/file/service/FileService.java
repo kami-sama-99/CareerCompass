@@ -51,7 +51,7 @@ public class FileService {
         fileRepository.save(entity);
 
         // ✅ Parse resume using your Python API
-//        ParsedResume parsedResume = resumeParserClient.getParsedResume(file);
+        System.out.println("Parsed resume: " + resumeParserClient.getParsedResume(file));
 
         // ✅ Build metadata DTO
         FileMetadata fileMetadata = new FileMetadata(
