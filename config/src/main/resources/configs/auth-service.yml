@@ -1,8 +1,8 @@
-eureka:
-  client:
-    service-url:
-      defaultZone: http://eureka-server:8761/eureka/
-  instance:
-    prefer-ip-address: true
-    hostname: localhost
-    instance-id: ${spring.application.name}:${server.port}
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://eureka-server:8761/eureka/
+#  instance:
+#    prefer-ip-address: true
+#    hostname: localhost
+#    instance-id: ${spring.application.name}:${server.port}
