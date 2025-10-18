@@ -1,6 +1,6 @@
 firebase:
   service-account-key-path: ${FIREBASE_SERVICE_ACCOUNT}
-  storage-bucket: career-compass-e2f8b.appspot.com
+  storage-bucket: 
 
 #eureka:
 #  client:
